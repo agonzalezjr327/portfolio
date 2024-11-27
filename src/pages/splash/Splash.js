@@ -17,17 +17,17 @@ class Splash extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      redirect: false,
+      redirect: true,
     };
   }
 
-  componentDidMount() {
-    this.id = setTimeout(() => this.setState({ redirect: true }), 5500);
-  }
+  // componentDidMount() {
+  //   this.id = setTimeout(() => this.setState({ redirect: true }), 5500);
+  // }
 
-  componentWillMount() {
-    clearTimeout(this.id);
-  }
+  // componentWillMount() {
+  //   clearTimeout(this.id);
+  // }
 
   render() {
     return this.state.redirect ? (
