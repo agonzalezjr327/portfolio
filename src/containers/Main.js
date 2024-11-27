@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Route, Switch, BrowserRouter } from "react-router-dom";
 import Home from "../pages/home/HomeComponent";
-import Splash from "../pages/splash/Splash";
+// import Splash from "../pages/splash/Splash";
 import Education from "../pages/education/EducationComponent";
 import Experience from "../pages/experience/Experience";
 import Opensource from "../pages/opensource/Opensource";
@@ -56,12 +56,12 @@ export default class Main extends Component {
             render={(props) => <Contact {...props} theme={this.props.theme} />}
           />
 
-          {settings.isSplash && (
+          {/* {settings.isSplash && (
             <Route
               path="/splash"
               render={(props) => <Splash {...props} theme={this.props.theme} />}
             />
-          )}
+          )} */}
 
           <Route
             path="/projects"
