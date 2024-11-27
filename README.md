@@ -1,3 +1,5 @@
+<img src="./public/icons/desc.png"></img>
+
 # Arnulfo Gonzalez Jr Portfolio 📚
 
 ✔️ Summary and About me\
