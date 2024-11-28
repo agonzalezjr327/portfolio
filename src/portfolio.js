@@ -603,10 +603,9 @@ const experience = {
           company_url: "https://corrections.az.gov/phoenix-west",
           logo_path: "scc.gif",
           duration: "Apr 2021 - Present",
-          duration: "June 2019 - April 2020",
           location: "Arizona, USA",
           description:
-            "I guide incarcerated individuals both inside and outside of prison, helping them navigate the world of coding and technology. I work closely with them to identify the best resources for learning—whether that’s free online courses, coding tutorials, or open-source projects—and assist them in setting up their coding environments, ensuring they have the tools they need to succeed. I take a hands-on approach in troubleshooting technical issues, answering questions, and breaking down complex concepts into manageable steps. Outside of prison, I continue offering support by connecting them with job opportunities, internships, and additional educational resources, helping them build a path toward a career in tech. Through this mentorship, I aim to provide more than just technical skills; I help build confidence, motivation, and a sense of purpose, empowering individuals to transform their lives through coding.",
+            "I have been mentoring 250+ incarcerated individuals both inside and outside of prison, helping them navigate the world of coding and technology. I work closely with them to identify the best resources for learning—whether that’s free online courses, coding tutorials, or open-source projects—and assist them in setting up their coding environments, ensuring they have the tools they need to succeed. I take a hands-on approach in troubleshooting technical issues, answering questions, and breaking down complex concepts into manageable steps. Outside of prison, I continue offering support by connecting them with job opportunities, internships, and additional educational resources, helping them build a path toward a career in tech. Through this mentorship, I aim to provide more than just technical skills; I help build confidence, motivation, and a sense of purpose, empowering individuals to transform their lives through coding.",
           color: "#4285F4",
         },
       ],
