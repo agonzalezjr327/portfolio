@@ -45,13 +45,23 @@ class Contact extends Component {
                   {ContactData["description"]}
                 </p>
                 <SocialMedia theme={theme} />
-                <div className="resume-btn-div">
-                  <Button
-                    text="See My Resume"
-                    newTab={true}
+                <div className="resume-btn-div mb-3">
+                  <a
+                    href="mailto:agonzalezjr327@gmail.com"
+                    className="btn btn-primary btn-lg p-1 mb-1 rounded-pill w-50"
+                  >
+                    📧 Email me
+                  </a>
+
+                  <a
                     href={greeting.resumeLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     theme={theme}
-                  />
+                    className="btn btn-info btn-lg p-1 rounded-pill text-white w-50"
+                  >
+                    ⭐Resume
+                  </a>
                 </div>
               </div>
             </div>
@@ -77,13 +87,13 @@ class Contact extends Component {
                   />
                 </div> */}
               </div>
-              <div className="blog-heading-img-div">
-                {/* <img
+              {/* <div className="blog-heading-img-div"> */}
+              {/* <img
 											src={require(`../../assets/images/${blogSection["avatar_image_path"]}`)}
 											alt=""
 										/> */}
-                <BlogsImg theme={theme} />
-              </div>
+              {/* <BlogsImg theme={theme} /> */}
+              {/* </div> */}
             </div>
           </Fade>
           {/* <Fade bottom duration={1000} distance="40px">

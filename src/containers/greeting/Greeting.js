@@ -14,29 +14,36 @@ export default function Greeting(props) {
         <div className="greeting-main">
           <div className="greeting-text-div">
             <div>
-              <h1 className="greeting-text" style={{ color: theme.text }}>
-                {greeting.title}
-              </h1>
-              {greeting.nickname && (
+              <h1 className="greeting-text text-primary">{greeting.title}</h1>
+              {/* {greeting.nickname && (
                 <h2 className="greeting-nickname" style={{ color: theme.text }}>
                   ( {greeting.nickname} )
                 </h2>
-              )}
+              )} */}
               <p
                 className="greeting-text-p subTitle"
-                style={{ color: theme.secondaryText }}
+                // style={{ color: theme.secondaryText }}
               >
                 {greeting.subTitle}
               </p>
               <SocialMedia theme={theme} />
-              <div className="portfolio-repo-btn-div">
-                <Button
-                  text="⭐See my Resume"
-                  newTab={true}
+              <div className="portfolio-repo-btn-div row">
+                <a
+                  href="mailto:agonzalezjr327@gmail.com"
+                  className="btn btn-primary btn-lg p-1 mb-1 rounded-pill"
+                >
+                  📧 Email me
+                </a>
+
+                <a
                   href={greeting.resumeLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   theme={theme}
-                  className="portfolio-repo-btn"
-                />
+                  className="btn btn-info btn-lg p-1 rounded-pill text-white"
+                >
+                  ⭐Resume
+                </a>
               </div>
               {/* <div className="button-greeting-div">
               <Button text="Contact me" href="#contact" />
