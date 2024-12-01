@@ -1,5 +1,9 @@
 /* header */
 
+.active-link {
+  font-weight: 900;
+}
+
 .header {
   display: block;
   max-width: 90%;

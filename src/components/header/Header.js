@@ -40,8 +40,9 @@ class Header extends Component {
                 <NavLink
                   to="/home"
                   tag={Link}
-                  activeStyle={{ fontWeight: "bold" }}
-                  // style={{ color: theme.text }}
+                  className={({ isActive }) =>
+                    `text-info text-uppercase ${isActive ? "active-link" : ""}`
+                  }
                   onMouseEnter={(event) => onMouseEnter(event, theme.highlight)}
                   onMouseOut={(event) => onMouseOut(event)}
                 >
@@ -52,8 +53,9 @@ class Header extends Component {
                 <NavLink
                   to="/education"
                   tag={Link}
-                  activeStyle={{ fontWeight: "bold" }}
-                  // style={{ color: theme.text }}
+                  className={({ isActive }) =>
+                    `text-info text-uppercase ${isActive ? "active-link" : ""}`
+                  }
                   onMouseEnter={(event) => onMouseEnter(event, theme.highlight)}
                   onMouseOut={(event) => onMouseOut(event)}
                 >
@@ -64,8 +66,9 @@ class Header extends Component {
                 <NavLink
                   to="/experience"
                   tag={Link}
-                  activeStyle={{ fontWeight: "bold" }}
-                  // style={{ color: theme.text }}
+                  className={({ isActive }) =>
+                    `text-info text-uppercase ${isActive ? "active-link" : ""}`
+                  }
                   onMouseEnter={(event) => onMouseEnter(event, theme.highlight)}
                   onMouseOut={(event) => onMouseOut(event)}
                 >
@@ -76,8 +79,9 @@ class Header extends Component {
                 <NavLink
                   to="/projects"
                   tag={Link}
-                  activeStyle={{ fontWeight: "bold" }}
-                  // style={{ color: theme.text }}
+                  className={({ isActive }) =>
+                    `text-info text-uppercase ${isActive ? "active-link" : ""}`
+                  }
                   onMouseEnter={(event) => onMouseEnter(event, theme.highlight)}
                   onMouseOut={(event) => onMouseOut(event)}
                 >
@@ -100,8 +104,9 @@ class Header extends Component {
                 <NavLink
                   to="/contact"
                   tag={Link}
-                  activeStyle={{ fontWeight: "bold" }}
-                  // style={{ color: theme.text }}
+                  className={({ isActive }) =>
+                    `text-info text-uppercase ${isActive ? "active-link" : ""}`
+                  }
                   onMouseEnter={(event) => onMouseEnter(event, theme.highlight)}
                   onMouseOut={(event) => onMouseOut(event)}
                 >

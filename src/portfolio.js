@@ -70,12 +70,12 @@ const socialMediaLinks = [
   //   fontAwesomeIcon: "fa-x-twitter", // Reference https://fontawesome.com/icons/x-twitter?f=brands&s=solid
   //   backgroundColor: "#000000", // Reference https://simpleicons.org/?q=x
   // },
-  //  {
-  //    name: "Facebook",
-  //    link: "https://www.facebook.com/laymanbrother.19/",
-  //    fontAwesomeIcon: "fa-facebook-f", // Reference https://fontawesome.com/icons/facebook-f?style=brands
-  //    backgroundColor: "#1877F2", // Reference https://simpleicons.org/?q=facebook
-  //  },
+  {
+    name: "Facebook",
+    link: "https://www.facebook.com/ajuniorgonzalez327/",
+    fontAwesomeIcon: "fa-facebook-f", // Reference https://fontawesome.com/icons/facebook-f?style=brands
+    backgroundColor: "#1877F2", // Reference https://simpleicons.org/?q=facebook
+  },
   // {
   //   name: "Instagram",
   //   link: "https://www.instagram.com/layman_brother/",
