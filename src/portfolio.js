@@ -561,7 +561,7 @@ const experience = {
           duration: "Apr 2021 - Feb 2024",
           location: "Hyderabad, Telangana",
           description:
-            "I am working on automating healthcare products. The projects involve automation for process improvements and for significantly enhancing the profits. I am currently working on Cancer Survival and Reoccurence Prediction. Our goal is to make AI system which scales and removes doctor dependency as much as possible.",
+            "Delivered comprehensive coding and software development training, specializing in JavaScript, React, Node.js, and the MERN stack, empowering individuals with valuable technical skills. Designed and implemented personalized curricula tailored to varying levels of proficiency, ensuring student success in foundational and advanced programming concepts.Mentored students on real-world project development, debugging techniques, and best coding practices, fostering confidence and independence in problem-solving. Utilized automation and process improvement tools to enhance the efficiency of training workflows and project evaluations.Promoted social reintegration by equipping students with job-ready skills and encouraging growth through technology, positively impacting their lives and communities.",
           color: "#0879bf",
         },
       ],
