@@ -6,36 +6,27 @@ import Experience from "../pages/experience/Experience";
 import Opensource from "../pages/opensource/Opensource";
 import Contact from "../pages/contact/ContactComponent";
 import Projects from "../pages/projects/Projects";
-import { settings } from "../portfolio.js";
 
 export default class Main extends Component {
   render() {
+    const { theme } = this.props; // Destructure props for cleaner code
+
     return (
       <BrowserRouter basename="/">
         <Routes>
-          <Route path="/" element={<Navigate to="/home" />} />
-          <Route path="/home" element={<Home theme={this.props.theme} />} />
-          <Route
-            path="/experience"
-            element={<Experience theme={this.props.theme} />}
-          />
-          <Route
-            path="/education"
-            element={<Education theme={this.props.theme} />}
-          />
-          <Route
-            path="/opensource"
-            element={<Opensource theme={this.props.theme} />}
-          />
-          <Route
-            path="/contact"
-            element={<Contact theme={this.props.theme} />}
-          />
-          <Route
-            path="/projects"
-            element={<Projects theme={this.props.theme} />}
-          />
-          <Route path="*" element={<Navigate to="/home" />} />
+          {/* Redirect from root to home */}
+          <Route path="/" element={<Navigate to="/home" replace />} />
+
+          {/* Define application routes */}
+          <Route path="/home" element={<Home theme={theme} />} />
+          <Route path="/experience" element={<Experience theme={theme} />} />
+          <Route path="/education" element={<Education theme={theme} />} />
+          <Route path="/opensource" element={<Opensource theme={theme} />} />
+          <Route path="/contact" element={<Contact theme={theme} />} />
+          <Route path="/projects" element={<Projects theme={theme} />} />
+
+          {/* Catch-all route for invalid paths */}
+          <Route path="*" element={<Navigate to="/home" replace />} />
         </Routes>
       </BrowserRouter>
     );
