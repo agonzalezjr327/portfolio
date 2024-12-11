@@ -1,5 +1,3 @@
-/* Change this file to get your personal Portfolio */
-
 // Website related settings
 const settings = {
   isSplash: false, // Change this to false if you don't want Splash screen.
@@ -24,7 +22,8 @@ const greeting = {
   nickname: "Junior",
   subTitle:
     "Passionate Full-Stack Developer & Mentor, Building Scalable Solutions That Drive Social Impact and Empower Change.",
-  resumeLink: "https://drive.google.com/file/d/1weP82tSRwJe18IZlv8Z-pXakfvwu0x0M/view?usp=sharing",
+  resumeLink:
+    "https://drive.google.com/file/d/1weP82tSRwJe18IZlv8Z-pXakfvwu0x0M/view?usp=sharing",
   portfolio_repository: "https://github.com/agonzalezjr327",
   githubProfile: "https://github.com/agonzalezjr327",
 };
