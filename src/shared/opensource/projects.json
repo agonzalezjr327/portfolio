@@ -95,6 +95,32 @@
           "iconifyClass": "logos-javascript"
         }
       ]
+    },
+    {
+      "id": "R_kgDOG0_8uQ",
+      "name": "Blessings Balance Breath Yoga",
+      "createdAt": "2025-08-21T14:50:20Z",
+      "url": "https://blessingsbalancebreathyoga.com/",
+      "description": "Key features include SEO optimization, social media integration, and Google Analytics for performance tracking.",
+      "isFork": false,
+      "languages": [
+        {
+          "name": "HTML",
+          "iconifyClass": "logos-html-5"
+        },
+        {
+          "name": "CSS",
+          "iconifyClass": "logos-css-3"
+        },
+        {
+          "name": "JavaScript",
+          "iconifyClass": "logos-javascript"
+        },
+        {
+          "name": "React",
+          "iconifyClass": "logos-react"
+        }
+      ]
     }
   ]
 }

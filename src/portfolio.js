@@ -5,7 +5,7 @@ const settings = {
 
 //SEO Related settings
 const seo = {
-  title: "Arnulfo Gonzalez Jr's Portfolio",
+  title: "Arnulfo Gonzalez Jr | Full Stack Developer Portfolio",
   description:
     "Explore the portfolio of Arnulfo Gonzalez Jr., a Full-Stack Developer and Coding Mentor with experience in building scalable web applications and empowering others through technology. Discover projects showcasing expertise in JavaScript, React, Node.js, and Firebase, as well as my work mentoring incarcerated individuals and developing impactful tech solutions. From freelance development to mentoring, I create sustainable, user-focused solutions that drive both technical excellence and social change.",
   og: {
@@ -589,6 +589,17 @@ const experience = {
           description:
             "Responsive website that looks great on all devices. I used Bootstrap and Sass for front end development. I had regular meetings with client to get their feedback and implement it in website. Client was very satisfied with the website. I implemented a lot of features in the website like SEO, Social Media Integration, and Google Analytics.",
           color: "#ee3c26",
+        },
+        {
+          title: "Blessings Balance Breath Yoga",
+          company: "Non-Profit Organization",
+          company_url: "https://blessingsbalancebreathyoga.com/",
+          logo_path: "yogalogo.png",
+          duration: "Mar 2025 - Aug 2025",
+          location: "Arizona, USA",
+          description:
+            "I designed and developed a responsive website for Blessings Balance Breath Yoga, a nonprofit dedicated to bringing yoga to underserved, underrepresented, and justice-impacted communities. The site was built with Bootstrap and Sass to ensure a clean, modern design that works seamlessly across all devices. Throughout development, I collaborated closely with the client, holding regular feedback sessions to refine the site’s look, feel, and functionality. Key features include SEO optimization, social media integration, and Google Analytics for performance tracking. The client was highly satisfied with the final product, which reflects their mission of empowerment, healing, and harmony.",
+          color: "#d0efe1",
         },
       ],
     },
