@@ -11,7 +11,7 @@ const seo = {
   og: {
     title: "Arnulfo Gonzalez Jr's Portfolio",
     type: "website",
-    url: "http://arnulfogonzalezjr.com/",
+    url: "https://agonzalezjr327.github.io/portfolio/",
   },
 };
 
@@ -23,7 +23,7 @@ const greeting = {
   subTitle:
     "Passionate Full-Stack Developer & Mentor, Building Scalable Solutions That Drive Social Impact and Empower Change.",
   resumeLink:
-    "https://drive.google.com/file/d/1weP82tSRwJe18IZlv8Z-pXakfvwu0x0M/view?usp=sharing",
+    "https://drive.google.com/file/d/1KwCA8V6W7frEDAcT7E4HFIxE5kiJ9XYK/view?usp=sharing",
   portfolio_repository: "https://github.com/agonzalezjr327",
   githubProfile: "https://github.com/agonzalezjr327",
 };

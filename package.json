@@ -2,7 +2,7 @@
   "private": true,
   "name": "Arnulfogonzalezjr",
   "version": "0.1.0",
-  "homepage": "https://arnulfogonzalezjr.com",
+  "homepage": "https://agonzalezjr327.github.io/portfolio/",
   "scripts": {
     "build": "react-scripts --openssl-legacy-provider build",
     "predeploy": "npm run build",
