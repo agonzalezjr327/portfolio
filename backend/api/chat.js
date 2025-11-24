@@ -3,7 +3,7 @@ import fs from "fs";
 import path from "path";
 
 const client = new OpenAI({ apiKey: process.env.OPENAI_KEY });
-const myBio = fs.readFileSync(path.join(process.cwd(), "backend", "data", "arnulfo_resume.txt"), "utf8");
+const myBio = process.env.MY_BIO;
 
 export default async function handler(req, res) {
   // Handle CORS preflight
