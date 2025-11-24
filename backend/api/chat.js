@@ -1,28 +1,14 @@
-import fs from "fs";
-import path from "path";
-import OpenAI from "openai";
+const fs = require("fs");
+const path = require("path");
+const OpenAI = require("openai");
+const express = require("express");
 
-// Initialize OpenAI client
+const router = express.Router();
+
 const client = new OpenAI({ apiKey: process.env.OPENAI_KEY });
-
-// Read your resume once at startup
 const myBio = fs.readFileSync(path.join(__dirname, "arnulfo_resume.txt"), "utf8");
 
-export default async function handler(req, res) {
-  // Handle CORS preflight
-  if (req.method === "OPTIONS") {
-    res.setHeader("Access-Control-Allow-Origin", "*"); // Or your frontend URL
-    res.setHeader("Access-Control-Allow-Methods", "POST, OPTIONS");
-    res.setHeader("Access-Control-Allow-Headers", "Content-Type");
-    return res.status(200).end();
-  }
-
-  // Only allow POST requests
-  if (req.method !== "POST") {
-    return res.status(405).json({ error: "Method not allowed" });
-  }
-
-  // Get the user message
+router.post("/", async (req, res) => {
   const { message } = req.body;
 
   try {
@@ -31,12 +17,13 @@ export default async function handler(req, res) {
       messages: [
         { role: "system", content: `You are Arnulfo Gonzalez Jr's portfolio AI assistant. Use the following bio: ${myBio}` },
         { role: "user", content: message }
-      ],
+      ]
     });
-
-    res.status(200).json({ reply: completion.choices[0].message.content });
+    res.json({ reply: completion.choices[0].message.content });
   } catch (err) {
     console.error(err);
     res.status(500).json({ reply: "Sorry, something went wrong." });
   }
-}
+});
+
+module.exports = router;
