@@ -3,21 +3,35 @@ import React, { useState } from "react";
 export default function AIChat() {
   const [messages, setMessages] = useState([]);
   const [input, setInput] = useState("");
+  const [loading, setLoading] = useState(false);
 
   async function sendMessage() {
+    if (!input.trim()) return;
+
     const newMsg = { sender: "user", text: input };
-    setMessages([...messages, newMsg]);
+    setMessages(prev => [...prev, newMsg]);
+    setLoading(true);
 
-    const res = await fetch("https://portfolio-five-delta-50.vercel.app/chat", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ message: input })
-    });
+    try {
+      const res = await fetch("/api/chat", { // Use serverless path
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ message: input })
+      });
 
-    const data = await res.json();
+      if (!res.ok) {
+        throw new Error(`Server error: ${res.status}`);
+      }
 
-    setMessages(prev => [...prev, { sender: "ai", text: data.reply }]);
-    setInput("");
+      const data = await res.json();
+      setMessages(prev => [...prev, { sender: "ai", text: data.reply }]);
+    } catch (err) {
+      console.error("Error sending message:", err);
+      setMessages(prev => [...prev, { sender: "ai", text: "Oops! Something went wrong." }]);
+    } finally {
+      setInput("");
+      setLoading(false);
+    }
   }
 
   return (
@@ -30,6 +44,7 @@ export default function AIChat() {
             {m.text}
           </div>
         ))}
+        {loading && <div style={styles.ai}>Thinking...</div>}
       </div>
 
       <div style={{ display: "flex" }}>
@@ -38,8 +53,11 @@ export default function AIChat() {
           value={input}
           onChange={(e) => setInput(e.target.value)}
           placeholder="Ask anything..."
+          onKeyDown={(e) => e.key === "Enter" && sendMessage()}
         />
-        <button style={styles.button} onClick={sendMessage}>Send</button>
+        <button style={styles.button} onClick={sendMessage} disabled={loading}>
+          Send
+        </button>
       </div>
     </div>
   );
@@ -53,20 +71,26 @@ const styles = {
     border: "1px solid #ccc",
     padding: 10,
     marginBottom: 10,
-    borderRadius: 8
+    borderRadius: 8,
+    display: "flex",
+    flexDirection: "column"
   },
   user: {
     background: "#007bff",
     color: "white",
     padding: 8,
     borderRadius: 8,
-    margin: "5px 0"
+    margin: "5px 0",
+    alignSelf: "flex-end",
+    maxWidth: "80%"
   },
   ai: {
     background: "#eee",
     padding: 8,
     borderRadius: 8,
-    margin: "5px 0"
+    margin: "5px 0",
+    alignSelf: "flex-start",
+    maxWidth: "80%"
   },
   input: {
     flex: 1,
@@ -80,6 +104,7 @@ const styles = {
     borderRadius: 4,
     background: "#28a745",
     color: "white",
-    border: "none"
+    border: "none",
+    cursor: "pointer"
   }
 };
