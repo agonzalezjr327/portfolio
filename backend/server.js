@@ -3,6 +3,7 @@ import cors from "cors";
 import dotenv from "dotenv";
 import OpenAI from "openai";
 import fs from "fs";
+import path from "path";
 
 dotenv.config();
 const app = express();
@@ -18,7 +19,7 @@ app.use(cors({
 
 const client = new OpenAI({ apiKey: process.env.OPENAI_KEY });
 
-const myBio = fs.readFileSync("./data/arnulfo_resume.txt", "utf8");
+const myBio = fs.readFileSync(path.join(process.cwd(), "data", "arnulfo_resume.txt"), "utf8");
 
 app.post("/chat", async (req, res) => {
   const { message } = req.body;
