@@ -1,7 +1,16 @@
+import OpenAI from "openai";
+import fs from "fs";
+import path from "path";
+
+const client = new OpenAI({ apiKey: process.env.OPENAI_KEY });
+const myBio = fs.readFileSync(path.join(process.cwd(), "data", "arnulfo_resume.txt"), "utf8");
+
+
 export default async function handler(req, res) {
   // Handle CORS preflight
   if (req.method === "OPTIONS") {
     res.setHeader("Access-Control-Allow-Origin", "*"); // or specific domains
+    res.setHeader("Access-Control-Allow-Origin", "https://agonzalezjr327.github.io");
     res.setHeader("Access-Control-Allow-Methods", "POST, OPTIONS");
     res.setHeader("Access-Control-Allow-Headers", "Content-Type");
     return res.status(200).end();
