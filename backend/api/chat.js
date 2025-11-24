@@ -1,9 +1,11 @@
 const express = require("express");
 const OpenAI = require("openai");
-
+const cors = require("cors");
 const router = express.Router();
 const client = new OpenAI({ apiKey: process.env.OPENAI_KEY });
 const myBio = process.env.MY_BIO;
+
+router.use(cors());
 
 router.post("/", async (req, res) => {
   const { message } = req.body;
