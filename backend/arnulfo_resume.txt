@@ -1,0 +1,69 @@
+Arnulfo Gonzalez Jr
+FullStack Developer: LINKEDIN - GITHUB - PORTFOLIO
+
+EMAIL
+agonzalezjr327@gmail.com
+
+FREELANCE EXPERIENCE
+January 2020 - Present
+• Collaborated with 3+ remote teams in an Agile environment, participating
+in 50+ daily stand-ups 5+ sprint planning sessions, and 5+ retrospectives,
+successfully managing and delivering projects 100% on time
+• Maintained code versioning through Git over 100+ instance, managing
+10+ branches, resolving 30+merge conflicts, and ensuring smooth
+integration, which contributed to reducing deployment time by 25%
+• Demonstrated strong debugging skills, identifying and resolving complex
+issues leading to a 30% reduction in user-reported bugs and improved
+application performance by 15% over a 6-month period
+WORK EXPERIENCE
+Coding Instructor | Persevere Now | May 2024 - Present
+• Developed a year-long MERN stack curriculum focusing on building
+industry ready skills for both front and back end development
+• Mentored 300+ students, helping them create 5+ real-world applications
+using JavaScript, React, and Node.js, improving their problem-solving
+abilities
+•Conducted monthly progress evaluations, resulting in a 20% increase in
+student project completion rates
+Coding Instructor | Second Chance Center | April 2021 - Feb 2024
+• Led an 8-week web development course on HTML, CSS, JavaScript, and
+React, helping 300+ students graduate and gain essential skills
+• Taught Microsoft Office Suite (Word, Excel, PowerPoint), improving
+students’ productivity and workplace readiness
+• Provided career development support, including resume building and
+mock interviews, enabling 60% of students to secure employment
+EDUCATION
+Justice Through Code | Columbia University, September 2024 -
+Present - Capstone: Bloom Housing - AI widget that simplifies/translates documents
+Certifications | Rio Salado College, February 2018 - July 2023
+Certifications | Coursera February 2018 - July 2023
+• Data Analytics, IT Support, Computer Science 50, Cyber Security
+FullStack Development | Persevere Now, January 2020 - April 2021
+
+SKILLS
+Programming Languages:
+JavaScript, HTML, R, CSS,
+React, JSON, Python, Flask
+Backend Technologies:
+Express, NodeJs, MongoDB,
+SQL
+State Management: Redux,
+Redux-toolkit
+Testing: Mocha, Chai
+APIs: RESTful, GraphQL
+Frameworks & Libraries:
+Bootstrap, SASS, Axios
+Version Control: Git, GitHub
+Development Tools: VS Code,
+Bash, PowerShell, Cmd
+Other: Data Analytics, IT
+Support, Cybersecurity, SEO,
+Marketing, Excel, PWA's, Agile,
+Scrum
+OPEN SOURCE
+CONTRIBUTIONS
+Folium: added interactive
+mapping
+FastAPI: Modern API building
+PROJECTS
+Product List
+Outlaws to Advocates
