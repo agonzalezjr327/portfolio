@@ -1,4 +1,4 @@
-require('dotenv').config();
+// require('dotenv').config();
 const express = require("express");
 const chatRouter = require("./api/chat"); // adjust path if needed
 
