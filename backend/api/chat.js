@@ -6,7 +6,7 @@ import OpenAI from "openai";
 const client = new OpenAI({ apiKey: process.env.OPENAI_KEY });
 
 // Read your resume once at startup
-const myBio = fs.readFileSync(path.join(process.cwd(), "backend", "data", "arnulfo_resume.txt"), "utf8");
+const myBio = fs.readFileSync(path.join(__dirname, "arnulfo_resume.txt"), "utf8");
 
 export default async function handler(req, res) {
   // Handle CORS preflight
