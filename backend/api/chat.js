@@ -1,12 +1,9 @@
 import OpenAI from "openai";
-import fs from "fs";
-import path from "path";
 
 const client = new OpenAI({ apiKey: process.env.OPENAI_KEY });
 const myBio = process.env.MY_BIO;
 
 export default async function handler(req, res) {
-  // Handle CORS preflight
   if (req.method === "OPTIONS") {
     res.setHeader("Access-Control-Allow-Origin", "*");
     res.setHeader("Access-Control-Allow-Methods", "POST, OPTIONS");
