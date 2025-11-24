@@ -1,28 +1,28 @@
-import OpenAI from "openai";
 import fs from "fs";
 import path from "path";
+import OpenAI from "openai";
 
+// Initialize OpenAI client
 const client = new OpenAI({ apiKey: process.env.OPENAI_KEY });
-const myBio = fs.readFileSync(path.join(process.cwd(), "data", "arnulfo_resume.txt"), "utf8");
 
+// Read your resume once at startup
+const myBio = fs.readFileSync(path.join(process.cwd(), "backend", "data", "arnulfo_resume.txt"), "utf8");
 
 export default async function handler(req, res) {
   // Handle CORS preflight
   if (req.method === "OPTIONS") {
-    res.setHeader("Access-Control-Allow-Origin", "*"); // or specific domains
-    res.setHeader("Access-Control-Allow-Origin", "https://agonzalezjr327.github.io");
+    res.setHeader("Access-Control-Allow-Origin", "*"); // Or your frontend URL
     res.setHeader("Access-Control-Allow-Methods", "POST, OPTIONS");
     res.setHeader("Access-Control-Allow-Headers", "Content-Type");
     return res.status(200).end();
   }
 
-  // Set CORS for the actual request
-  res.setHeader("Access-Control-Allow-Origin", "*"); // or specific domains
-
+  // Only allow POST requests
   if (req.method !== "POST") {
     return res.status(405).json({ error: "Method not allowed" });
   }
 
+  // Get the user message
   const { message } = req.body;
 
   try {
