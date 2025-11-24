@@ -6,7 +6,8 @@ const path = require("path");
 const router = express.Router();
 
 const client = new OpenAI({ apiKey: process.env.OPENAI_KEY });
-const myBio = fs.readFileSync(path.join(process.cwd(), "api", "data", "arnulfo_resume.txt"), "utf8");
+const myBio = process.env.MY_BIO;
+
 
 router.post("/", async (req, res) => {
   const { message } = req.body;
