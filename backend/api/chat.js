@@ -1,22 +1,12 @@
-import OpenAI from "openai";
+const express = require("express");
+const OpenAI = require("openai");
+
+const router = express.Router();
 
 const client = new OpenAI({ apiKey: process.env.OPENAI_KEY });
 const myBio = process.env.MY_BIO;
 
-export default async function handler(req, res) {
-  if (req.method === "OPTIONS") {
-    res.setHeader("Access-Control-Allow-Origin", "*");
-    res.setHeader("Access-Control-Allow-Methods", "POST, OPTIONS");
-    res.setHeader("Access-Control-Allow-Headers", "Content-Type");
-    return res.status(200).end();
-  }
-
-  res.setHeader("Access-Control-Allow-Origin", "*");
-
-  if (req.method !== "POST") {
-    return res.status(405).json({ error: "Method not allowed" });
-  }
-
+router.post("/", async (req, res) => {
   const { message } = req.body;
 
   try {
@@ -28,9 +18,11 @@ export default async function handler(req, res) {
       ]
     });
 
-    res.status(200).json({ reply: completion.choices[0].message.content });
+    res.json({ reply: completion.choices[0].message.content });
   } catch (err) {
     console.error(err);
     res.status(500).json({ reply: "Sorry, something went wrong." });
   }
-}
+});
+
+module.exports = router;
