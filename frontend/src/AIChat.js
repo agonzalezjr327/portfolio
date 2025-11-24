@@ -8,7 +8,7 @@ export default function AIChat() {
     const newMsg = { sender: "user", text: input };
     setMessages([...messages, newMsg]);
 
-    const res = await fetch("https://arnulfo-ai-backend.vercel.app/chat", {
+    const res = await fetch("https://portfolio-five-delta-50.vercel.app/chat", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ message: input })
